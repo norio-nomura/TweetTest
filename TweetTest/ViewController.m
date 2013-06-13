@@ -38,7 +38,7 @@
 				
                 NSString *status = [[_textView text]stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                 NSString *applicationId = [_applicationIdView text];
-                NSDictionary *params = @{@"adc": @"phone", @"application_id":applicationId, @"status":status};
+                NSDictionary *params = applicationId.length ? @{@"adc": @"phone", @"application_id":applicationId, @"status":status} : @{@"adc": @"phone", @"status":status};
                 
                 SLRequest *slRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                                           requestMethod:SLRequestMethodPOST
