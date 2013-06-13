@@ -42,7 +42,7 @@
                 
                 SLRequest *slRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
                                                           requestMethod:SLRequestMethodPOST
-                                                                    URL:[NSURL URLWithString:@"https://api.twitter.com//1/statuses/update.json"]
+                                                                    URL:[NSURL URLWithString:@"https://api.twitter.com/1/statuses/update.json"]
                                                              parameters:params];
                 [slRequest setAccount:twitterAccount];
                 [slRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error){
